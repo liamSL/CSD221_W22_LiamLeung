@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <entity-mappings ptype="MONOLITH" ppkg="lab2_part2" epkg="entities" v="1.5.4" rws="_154750631152583" Pws="_154750631152583" cws="_154750631152583" persistenceUnitName="Lab2Part2" sm="false" xs="false" id="_14845797840591" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <mapped-superclass compositePrimaryKeyClass="Person_1PK" abs="true" class="Person_1" v="true" jbn="false" xre="false" m="false" rootElement="_14845797840591" id="_148457978415514">
-        <attributes>
-            <basic attribute-type="String" v="true" xvt="" name="firstName" id="_148457978416020">
-                <xwm/>
-                <xm/>
-            </basic>
-            <basic attribute-type="String" v="true" xvt="" name="lastName" id="_148457978416022">
-                <xwm/>
-                <xm/>
-            </basic>
-            <basic attribute-type="int" v="true" xvt="" name="SIN" id="_164418170461288">
-                <xwm/>
-                <xm/>
-            </basic>
-            <id attribute-type="Long" v="true" xvt="" name="id" id="_148457978416021">
-                <xwm/>
-                <xm/>
-                <generated-value strategy="IDENTITY"/>
-            </id>
-        </attributes>
-    </mapped-superclass>
-    <entity compositePrimaryKeyClass="Customer_1PK" abs="false" class="Customer_1" superclassId="_148457978415514" v="true" jbn="false" xre="false" m="false" rootElement="_14845797840591" id="_148457978415410">
+    <entity compositePrimaryKeyClass="Customer_1PK" abs="false" class="Customer_1" superclassId="_164426207956070" v="true" jbn="false" xre="false" m="false" rootElement="_14845797840591" id="_148457978415410">
         <attributes>
             <basic attribute-type="String" v="true" xvt="" name="credit_card_number" id="_164418172422589">
                 <xwm/>
@@ -39,7 +18,7 @@
             <query>Select c from Customer_1 c where c.cust_id=:cust_id</query>
         </nq>
     </entity>
-    <entity compositePrimaryKeyClass="Employee_1PK" abs="false" class="Employee_1" superclassId="_148457978415514" v="true" jbn="false" xre="false" m="false" rootElement="_14845797840591" id="_148457978799623">
+    <entity compositePrimaryKeyClass="Employee_1PK" abs="false" class="Employee_1" superclassId="_164426207956070" v="true" jbn="false" xre="false" m="false" rootElement="_14845797840591" id="_148457978799623">
         <attributes>
             <basic attribute-type="String" v="true" xvt="" name="Title" id="_164418164690586">
                 <xwm/>
@@ -57,12 +36,46 @@
             <query>Select e from Employee_1 e where e.Salary=:Salary</query>
         </nq>
     </entity>
+    <entity compositePrimaryKeyClass="Person_1PK" abs="false" class="Person_1" v="true" jbn="false" xre="false" m="false" rootElement="_14845797840591" id="_164426207956070">
+        <ath>fcarella</ath>
+        <attributes>
+            <basic attribute-type="String" v="true" xvt="" name="firstName" id="_164426210997675">
+                <xwm/>
+                <xm/>
+            </basic>
+            <basic attribute-type="String" v="true" xvt="" name="lastName" id="_164426211063076">
+                <xwm/>
+                <xm/>
+            </basic>
+            <basic attribute-type="int" v="true" xvt="" name="SIN" id="_164426211138677">
+                <xwm/>
+                <xm/>
+            </basic>
+            <id attribute-type="Long" v="true" xvt="" name="id" id="_164426207956071">
+                <xwm/>
+                <xm/>
+                <generated-value strategy="IDENTITY"/>
+            </id>
+        </attributes>
+        <nq e="false" name="Person_1.findAll">
+            <query>Select e from Person_1 e</query>
+        </nq>
+        <nq e="false" name="Person_1.findByFirstName">
+            <query>Select e from Person_1 e where e.firstName=:firstName</query>
+        </nq>
+        <nq e="false" name="Person_1.findByLastName">
+            <query>Select e from Person_1 e where e.lastName=:lastName</query>
+        </nq>
+        <nq e="false" name="Person_1.findBySIN">
+            <query>Select e from Person_1 e where e.SIN=:SIN</query>
+        </nq>
+    </entity>
     <c/>
     <wsl>
         <ws n="Main" id="_154750631152583">
             <i ref="_148457978799623" x="151" y="237"/>
-            <i ref="_148457978415514" x="295" y="21"/>
-            <i ref="_148457978415410" x="437" y="237"/>
+            <i ref="_148457978415410" x="444" y="237"/>
+            <i ref="_164426207956070" x="307" y="31"/>
         </ws>
     </wsl>
 </entity-mappings>

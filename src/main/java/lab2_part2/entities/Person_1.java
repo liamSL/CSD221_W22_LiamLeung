@@ -1,13 +1,16 @@
 package lab2_part2.entities;
 
 import javax.persistence.Basic;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
 
-@MappedSuperclass
-public abstract class Person_1 {
+/**
+ * @author fcarella
+ */
+@Entity
+public class Person_1 {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
