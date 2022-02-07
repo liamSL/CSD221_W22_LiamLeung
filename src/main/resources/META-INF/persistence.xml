@@ -46,11 +46,11 @@
     <class>lab2_part2.entities.Employee_1</class>
     <class>lab2_part2.entities.Person_1</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/lab2part2?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
-      <property name="javax.persistence.jdbc.password" value="itstudies12345"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/l2p2?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
+      <property name="javax.persistence.jdbc.password" value="itstudies123"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
-      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+      <property name="javax.persistence.schema-generation.database.action" value="create"/>
     </properties>
   </persistence-unit>
 </persistence>
