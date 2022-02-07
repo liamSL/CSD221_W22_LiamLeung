@@ -28,7 +28,7 @@ public class Customer {
     private String lastName;
     @Embedded
     @AttributeOverride(name = "city", column = @Column(name = "CITYNAME"))
-    @AttributeOverride(name = "state", column = @Column(name = "STATENAME"))
+//    @AttributeOverride(name = "state", column = @Column(name = "STATENAME"))
     private Address address;
     @OneToMany
     @JoinColumn(name = "CUSTID")
