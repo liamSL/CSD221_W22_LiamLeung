@@ -234,11 +234,16 @@ public class app {
     }
     
     public void deleteBook(){
-        System.out.println("which car would you like to delete?");
+        System.out.println("which car would you like to delete/sell from the catalogue?");
         View();
         int x = input.nextInt()- 1;
         B.remove(x);
         currentIndex--;
+    }
+    
+    public void sellBook(book b){
+        deleteBook();
+        b.sellItem();
     }
     
     public void addMagazine(){
