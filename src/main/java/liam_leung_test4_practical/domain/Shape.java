@@ -1,4 +1,5 @@
 package liam_leung_test4_practical.domain;
+import java.io.Serializable;
 import liam_leung_test4_practical.ShapeInterface;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,7 +9,7 @@ import javax.persistence.Id;
  * @author liaml_000
  */
 @Entity
-public abstract class Shape implements ShapeInterface{
+public abstract class Shape implements ShapeInterface, Serializable{
 
     @Id
     @GeneratedValue
