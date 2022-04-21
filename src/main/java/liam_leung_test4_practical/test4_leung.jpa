@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<entity-mappings ptype="MONOLITH" ppkg="liam_leung_test4_practical" epkg="domain" v="5.4.3" rws="_16505678757222" cws="_16505678757222" persistenceUnitName="DEFAULT_PU" sm="false" xs="false" id="_16505678757211" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <entity compositePrimaryKeyClass="SquarePK" abs="false" class="Square" superclassId="_16505678865096" v="true" jbn="false" xre="false" m="false" rootElement="_16505678757211" id="_16505678838173">
+        <ath>liaml_000</ath>
+        <attributes>
+            <basic attribute-type="String" v="true" xvt="" name="thelength" id="_165056805535621">
+                <xwm/>
+                <xm/>
+            </basic>
+            <basic attribute-type="String" v="true" xvt="" name="width" id="_165056809225024">
+                <xwm/>
+                <xm/>
+            </basic>
+        </attributes>
+        <nq e="false" name="Square.findAll">
+            <query>Select e from Square e</query>
+        </nq>
+        <nq e="false" name="Square.findByThelength">
+            <query>Select s from Square s where s.thelength=:thelength</query>
+        </nq>
+        <nq e="false" name="Square.findByWidth">
+            <query>Select s from Square s where s.width=:width</query>
+        </nq>
+    </entity>
+    <entity compositePrimaryKeyClass="ShapePK" abs="true" class="Shape" v="true" jbn="false" xre="false" m="false" rootElement="_16505678757211" id="_16505678865096">
+        <ath>liaml_000</ath>
+        <attributes>
+            <id attribute-type="Long" v="true" xvt="" name="id" id="_16505678865107">
+                <xwm/>
+                <xm/>
+                <generated-value strategy="DEFAULT"/>
+            </id>
+        </attributes>
+        <nq e="false" name="Shape.findAll">
+            <query>Select e from Shape e</query>
+        </nq>
+    </entity>
+    <entity compositePrimaryKeyClass="TrianglePK" abs="false" class="Triangle" superclassId="_16505678865096" v="true" jbn="false" xre="false" m="false" rootElement="_16505678757211" id="_16505679005369">
+        <ath>liaml_000</ath>
+        <attributes>
+            <basic attribute-type="String" v="true" xvt="" name="base" id="_165056806184322">
+                <xwm/>
+                <xm/>
+            </basic>
+            <basic attribute-type="String" v="true" xvt="" name="height" id="_165056806314923">
+                <xwm/>
+                <xm/>
+            </basic>
+        </attributes>
+        <nq e="false" name="Triangle.findAll">
+            <query>Select e from Triangle e</query>
+        </nq>
+        <nq e="false" name="Triangle.findByBase">
+            <query>Select t from Triangle t where t.base=:base</query>
+        </nq>
+        <nq e="false" name="Triangle.findByHeight">
+            <query>Select t from Triangle t where t.height=:height</query>
+        </nq>
+    </entity>
+    <wsl>
+        <ws n="Main" id="_16505678757222">
+            <i ref="_16505678838173" x="202" y="270"/>
+            <i ref="_16505678865096" x="362" y="70"/>
+            <i ref="_16505679005369" x="474" y="255"/>
+        </ws>
+    </wsl>
+</entity-mappings>

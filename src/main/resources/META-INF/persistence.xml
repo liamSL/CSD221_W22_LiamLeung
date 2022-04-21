@@ -5,6 +5,16 @@
     <class>lab2.domain.Customer</class>
     <class>lab2.domain.ProductOrder</class>
     <class>lab2.domain.Product</class>
+    <class>lab5.domain.Publication</class>
+    <class>lab5.domain.Book</class>
+    <class>lab5.domain.Magazine</class>
+    <class>lab5.domain.DiscMag</class>
+    <class>lab5.domain.CashTill</class>
+    <class>lab5.domain.SaleableItem</class>
+    <class>lab5.domain.Tickets</class>
+    <class>liam_leung_test4_practical.domain.Square</class>
+    <class>liam_leung_test4_practical.domain.Shape</class>
+    <class>liam_leung_test4_practical.domain.Triangle</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/lab2part2?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
@@ -50,6 +60,16 @@
       <property name="javax.persistence.jdbc.password" value="itstudies123"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="liam_leung_test4_PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/liam_leung_test4_PU?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="itstudies123"/>
       <property name="javax.persistence.schema-generation.database.action" value="create"/>
     </properties>
   </persistence-unit>
